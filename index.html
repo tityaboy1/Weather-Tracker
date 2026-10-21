@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <title>TamDan Weather</title>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="index.html">
+        <img src="logo.png" alt="" />
+        <h1>TamDan Weather</h1>
+      </a>
+    </header>
+    <main>
+      <h1>Check the weather in your local or anywhere</h1>
+      <form>
+        <input type="text" id="cityinput" placeholder="Enter city" required />
+        <button id="btn" type="submit">Search</button>
+      </form>
+      <p id="message" role="status">Please enter the city you want to search!</p>
+      <!-- Card for weather in formation -->
+      <div class="card" hidden>
+        <div class="temp">
+          <span class="material-symbols-outlined"> location_on </span>
+          <h3 id="city"></h3>
+          <h1 id="temp"></h1>
+        </div>
+        <div class="humidity">
+          <span class="material-symbols-outlined"> humidity_percentage </span>
+          <h3>humidity</h3>
+          <p id="humidity"></p>
+        </div>
+        <div class="wind">
+          <span class="material-symbols-outlined"> air </span>
+          <h3>wind</h3>
+          <p id="wind"></p>
+        </div>
+        <div class="visibility">
+          <span class="material-symbols-outlined"> visibility </span>
+          <h3>visibility</h3>
+          <p id="visibility"></p>
+        </div>
+        <div class="pressure">
+          <span class="material-symbols-outlined"> speed </span>
+          <h3>pressure</h3>
+          <p id="pressure"></p>
+        </div>
+        <div class="cloud">
+          <img  class="material-symbols-outlined" id="weather-icon"> </img>
+          <h3 id="condition"></h3>
+        </div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
