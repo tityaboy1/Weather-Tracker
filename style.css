@@ -392,6 +392,8 @@ form button:focus-visible {
     gap: 0 16px;
     padding: 23px 20px;
     border-radius: 18px;
+    margin: 0px;
+    width: 100%;
   }
 
   .card .temp {
@@ -456,7 +458,10 @@ form button:focus-visible {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 400px) {
+  .logo-name {
+    display: none;
+  }
   form {
     gap: 4px;
   }
@@ -471,6 +476,8 @@ form button:focus-visible {
 
   .card {
     padding-inline: 15px;
+    margin: 0px;
+    width: 100%;
   }
 
   .card .humidity,
@@ -478,5 +485,7 @@ form button:focus-visible {
   .card .visibility,
   .card .pressure {
     gap: 6px;
+    flex-direction: column;
+    padding-bottom: 10px;
   }
 }
