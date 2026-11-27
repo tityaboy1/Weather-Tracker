@@ -2,6 +2,8 @@
 
 A responsive weather dashboard for searching current conditions and a three-day forecast by city name.
 
+demo: https://tamda-weather-nenapk1ng-yaa20.vercel.app/
+
 ## Features
 
 - Current temperature, chance of rain, humidity, wind, visibility, pressure, and condition
