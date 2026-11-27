@@ -185,10 +185,10 @@ form button:focus-visible {
 .card {
   display: grid;
   margin-inline: auto;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   grid-template-rows: minmax(180px, auto) auto;
   gap: 0 22px;
-  width: 80%;
+  width: 90%;
   min-height: 0;
   padding: 34px;
   overflow: hidden;
@@ -212,7 +212,7 @@ form button:focus-visible {
 }
 
 .card .temp {
-  grid-column: 1 / 4;
+  grid-column: 1 / 5;
   grid-row: 1;
   display: grid;
   grid-template-columns: auto 1fr;
@@ -257,7 +257,7 @@ form button:focus-visible {
 }
 
 .card .cloud {
-  grid-column: 4;
+  grid-column: 5;
   grid-row: 1;
   flex-direction: column;
   align-items: center;
@@ -285,6 +285,7 @@ form button:focus-visible {
   backdrop-filter: blur(8px);
 }
 
+.card .chain-of-rain,
 .card .humidity,
 .card .wind,
 .card .visibility,
@@ -298,20 +299,24 @@ form button:focus-visible {
   border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-.card .humidity {
+.card .chain-of-rain {
   grid-column: 1;
 }
 
-.card .wind {
+.card .humidity {
   grid-column: 2;
 }
 
-.card .visibility {
+.card .wind {
   grid-column: 3;
 }
 
-.card .pressure {
+.card .visibility {
   grid-column: 4;
+}
+
+.card .pressure {
+  grid-column: 5;
 }
 
 .card .material-symbols-outlined {
@@ -328,6 +333,7 @@ form button:focus-visible {
   margin: 0;
 }
 
+h3,
 .card .humidity h3,
 .card .wind h3,
 .card .visibility h3,
@@ -346,6 +352,8 @@ form button:focus-visible {
   letter-spacing: 0;
   white-space: nowrap;
 }
+
+.card .chain-of-rain p,
 .card .humidity p,
 .card .wind p,
 .card .visibility p,
@@ -353,30 +361,32 @@ form button:focus-visible {
   margin: 0;
 }
 
-@media (max-width: 760px) {
-  main {
-    width: min(92%, 700px);
-  }
-
+@media (max-width: 1112px) {
   .card {
     grid-template-rows: minmax(155px, auto) auto;
     gap: 0 14px;
     padding: 26px;
+    width: 100%;
   }
 
   .card .temp h1 {
     font-size: 3.25rem;
   }
 
+  .card .chain-of-rain,
   .card .humidity,
   .card .wind,
   .card .visibility,
   .card .pressure {
-    gap: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4px;
+    padding-top: 10px;
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 1px) {
   header {
     padding: 20px;
   }
@@ -390,9 +400,8 @@ form button:focus-visible {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: minmax(155px, auto) auto auto auto;
     gap: 0 16px;
-    padding: 23px 20px;
+    padding: 0px;
     border-radius: 18px;
-    margin: 0px;
     width: 100%;
   }
 
@@ -415,31 +424,40 @@ form button:focus-visible {
   }
 
   .card .humidity,
+  .card .chain-of-rain,
   .card .wind,
   .card .visibility,
   .card .pressure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 68px;
     padding-top: 14px;
   }
 
   .card .humidity {
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 2;
   }
 
   .card .wind {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  .card .visibility {
     grid-column: 1;
     grid-row: 3;
   }
 
-  .card .pressure {
+  .card .visibility {
     grid-column: 2;
     grid-row: 3;
+  }
+
+  .card .pressure {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .card .chain-of-rain {
+    grid-column: 1;
+    grid-row: 2;
   }
 
   .card .material-symbols-outlined {
@@ -481,6 +499,7 @@ form button:focus-visible {
   }
 
   .card .humidity,
+  .card .chain-of-rain,
   .card .wind,
   .card .visibility,
   .card .pressure {

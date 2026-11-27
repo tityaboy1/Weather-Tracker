@@ -1,0 +1,247 @@
+.forecastcard {
+  width: 90%;
+  margin: 24px auto 0;
+  padding: 18px 16px 8px;
+  overflow: hidden;
+  border: 1px solid #e8edf4;
+  border-radius: 16px;
+  color: #17233c;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(32, 57, 103, 0.07);
+  text-align: left;
+}
+
+.forecastcard__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 0 16px;
+  border-bottom: 1px solid #edf0f5;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.forecastcard__calendar {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border-radius: 12px;
+  color: #315de8;
+  background: #edf3ff;
+  font-size: 22px;
+}
+
+.forecastcard__title {
+  margin: 0;
+  color: #17233c;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+}
+
+.forecastcard__subtitle {
+  margin: 2px 0 0;
+  color: #7d899e;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.forecast-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.forecast-row {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 2px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.forecast-row[hidden] {
+  display: none;
+}
+
+.forecast-row:last-child {
+  border-bottom: 0;
+}
+
+.forecast-row__date {
+  display: flex;
+  min-width: 156px;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.forecast-row__day {
+  color: #24324b;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.forecast-row__date time {
+  color: #8995a8;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.forecast-row__condition {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  align-items: center;
+  gap: 9px;
+}
+
+.forecast-icon {
+  flex: 0 0 auto;
+  color: #3982e8;
+  font-size: 24px;
+}
+
+.forecast-row__condition-name {
+  color: #45536b;
+  font-size: 0.84rem;
+  white-space: nowrap;
+}
+
+.rain-badge {
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.69rem;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+  color: #3470c7;
+  background: #edf5ff;
+}
+
+.forecast-row__temperature {
+  display: flex;
+  min-width: 98px;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 6px;
+  color: #8995a8;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.forecast-row__temperature strong {
+  color: #17233c;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.darkmode .forecastcard {
+  border-color: #303b4f;
+  color: #e5e7eb;
+  background: #1f2937;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+.darkmode .forecastcard__header,
+.darkmode .forecast-row {
+  border-color: #354155;
+}
+
+.darkmode .forecastcard__title,
+.darkmode .forecast-row__day,
+.darkmode .forecast-row__temperature strong {
+  color: #f3f4f6;
+}
+
+.darkmode .forecastcard__subtitle,
+.darkmode .forecast-row__date time,
+.darkmode .forecast-row__temperature {
+  color: #a7b1c2;
+}
+
+.darkmode .forecast-row__condition-name {
+  color: #c4ccda;
+}
+
+.darkmode .rain-badge--low {
+  color: #c4ccda;
+  background: #354155;
+}
+
+.darkmode .rain-badge--medium {
+  color: #b7d4ff;
+  background: #263d5d;
+}
+
+.darkmode .rain-badge--high {
+  color: #d0e2ff;
+  background: #31517a;
+}
+
+@media (max-width: 1112px) {
+  .forecastcard {
+    width: 100%;
+  }
+
+  .forecast-row {
+    gap: 10px;
+  }
+
+  .forecast-row__date {
+    min-width: 138px;
+    gap: 7px;
+  }
+
+  .forecast-row__condition {
+    gap: 7px;
+  }
+}
+
+@media (max-width: 520px) {
+  .forecastcard {
+    padding: 16px 12px 6px;
+  }
+
+  .forecast-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 7px 8px;
+    padding: 11px 2px;
+  }
+
+  .forecast-row__date {
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .forecast-row__condition {
+    grid-column: 1 / -1;
+    gap: 8px;
+  }
+
+  .forecast-row__temperature {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  .forecast-row__condition-name {
+    font-size: 0.8rem;
+  }
+
+  .forecast-row__day {
+    font-size: 0.84rem;
+  }
+
+  .forecast-row__temperature strong {
+    font-size: 0.86rem;
+  }
+}

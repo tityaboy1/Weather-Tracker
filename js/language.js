@@ -3,6 +3,8 @@ const translation = {
   en: {
     h1: "Check the weather in your local or anywhere",
     humidity: "humidity",
+    chainofrain: "chance of rain",
+
     wind: "wind",
     visibility: "visibility",
     pressure: "pressure",
@@ -12,6 +14,7 @@ const translation = {
   },
   kh: {
     h1: "ពិនិត្យមើលអាកាសធាតុនៅក្នុងតំបន់របស់អ្នក ឬទីកន្លែងណាក៏បាន",
+    chainofrain: "ឱកាសភ្លៀង",
     humidity: "សំណើម",
     wind: "ខ្យល់",
     visibility: "ភាពអាចមើលឃើញ",
